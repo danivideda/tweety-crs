@@ -2,8 +2,8 @@
     <div class="mr-2 flex-shrink-0">
         <a href="{{ $tweet->user->path() }}">
             <img
-            src="{{ $tweet->user->avatar }}"
-                alt="avatar"
+                src="{{ $tweet->user->avatar }}"
+                alt=""
                 class="rounded-full mr-2"
                 width="50"
                 height="50"
@@ -17,6 +17,13 @@
                 {{ $tweet->user->name }}
             </a>
         </h5>
-        <p class="text-sm">{{ $tweet->body }}</p>
+
+        <p class="text-sm mb-3">
+            {{ $tweet->body }}
+        </p>
+
+        @auth
+            <x-like-buttons :tweet="$tweet" />
+        @endauth
     </div>
 </div>

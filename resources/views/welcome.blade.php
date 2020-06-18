@@ -66,6 +66,7 @@
     <body>
         <div class="flex-center position-ref full-height">
 
+
             <div class="content">
                 <div class="title m-b-md">
                     Tweety
@@ -73,7 +74,7 @@
 
                 <div class="links">
                     @auth
-                        <a href="{{ route('home') }}">Home</a>
+                        <a href="{{ url('/tweets') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
